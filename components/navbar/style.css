@@ -1,0 +1,63 @@
+
+.navbar{
+    position: sticky;
+
+    width: 20%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgb(59, 59, 59);
+    
+}
+.logoTwitter{
+    height: 10%;
+    text-align: start;
+    color: white;
+    display: flex;
+    align-items: center;
+
+    font-size: 20px;
+}
+.nav{
+    padding: 0;
+}
+/* .btn{
+    width: 100%; 
+    padding: 15px;
+    color: white;
+    
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    cursor: pointer;
+} */
+.btn:hover{
+    border-radius: 50px;
+    background-color: rgba(26, 25, 25, 0.637);
+}
+
+/* .textBtn > span{
+    font-size: 20px;
+    font-weight: 400;
+    padding: 15px 20px;
+} */
+
+.login-out{
+    width: 95%; height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    padding: 5px 10px;
+    margin: 0 15px 15px 0;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    
+}
+.login-out:hover{
+    transition: 0.3s ;
+    background-color: rgb(44, 44, 44);
+}
