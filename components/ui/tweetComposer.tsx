@@ -1,5 +1,6 @@
 "use client"
 import { ChangeEvent, FormEvent, useState } from "react";
+import { Avatar } from "./avatar";
 
 export function TweetComposer():JSX.Element {
     const [ tweet , setTweet ] = useState<string>('');
@@ -26,7 +27,8 @@ export function TweetComposer():JSX.Element {
     return(
         <div className="w-full gap-2 flex border-b p-4  ">
             <div className="">
-                <p className="w-12 h-12 flex justify-center items-center border rounded-full">foto</p>
+                {/* <p className="w-12 h-12 flex justify-center items-center border rounded-full">foto</p> */}
+                <Avatar/>
             </div>
             <form onSubmit={handleSubmit} className="w-full">
                 <textarea

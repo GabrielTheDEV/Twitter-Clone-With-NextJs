@@ -1,4 +1,5 @@
 import { Link_Icon, Reply_Icon, Repost_Icon, Save_Icon } from "@/public/images/postTemplate/PostTemplate"
+import { Avatar } from "../ui/avatar"
 
 
 interface PostProps{
@@ -7,8 +8,10 @@ interface PostProps{
 
 export function PostTemplate({tweet}: PostProps):JSX.Element{
     return(
-        <div className="w-full h-full flex gap-2 p-4 pb-1 border-b hover:bg-gray-100">
-            <div className="w-12 h-12 flex justify-center items-center border rounded-full"><p>foto</p></div>
+        <div className="w-full h-full flex gap-2 p-3 pb-1 border-b hover:bg-gray-100">
+            <div>
+                <Avatar />
+            </div>
 
             <div className="w-full flex flex-col justify-center mt-1 mr-2"> 
                 <div className="flex items-center gap-2">
