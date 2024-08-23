@@ -1,4 +1,9 @@
+import { PageComponent } from "@/components/pageComponent";
 
-export default function explorerPage(){
-    return <h1>Hello Saves</h1>
+export default function SavesPage(){
+    return (
+        <PageComponent>
+            <h1>Hello Saves page</h1>
+        </PageComponent>
+    )
 }

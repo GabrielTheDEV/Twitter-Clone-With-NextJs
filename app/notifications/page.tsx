@@ -1,4 +1,9 @@
+import { PageComponent } from "@/components/pageComponent";
 
 export default function NotificationPage(){
-    return <h1>Hello Notification</h1>
+    return (
+        <PageComponent>
+            <h1>Hello Notifications page</h1>
+        </PageComponent>
+    )
 }

@@ -9,17 +9,19 @@ import  {
     Profile_Icon, 
     More_Icon
 }  from "../../public/images/navbar/Navbar_Icons";
+import { PostButton } from "../ui/button";
 
 
 export function NavBar(){
     return(
-        <aside className='navbar'>
+        <aside className='w-1/3 flex flex-col justify-between border-r '>
          
           
         <nav className='nav'>
-        <div className='w-auto flex items-start '> 
-            <h1 className="text-2xl">Twitter</h1>
-        </div>
+            <div className='w-auto flex ml-5 p-2 items-start '> 
+                <h1 className="text-2xl">Twitter</h1>
+            </div>
+
             <Link_NavBar 
                 name="Home"
                 route="/" 
@@ -27,7 +29,7 @@ export function NavBar(){
             />
              <Link_NavBar 
                 name="Explorer"
-                route="/explorerPage" 
+                route="/explorer" 
                 svg={<Search_Icon/>}
             />
              <Link_NavBar 
@@ -63,6 +65,7 @@ export function NavBar(){
 
 {/* 
              <BigPostButton/>  */}
+             <PostButton/>
         </nav>
 
         {/* <section className="login-out">

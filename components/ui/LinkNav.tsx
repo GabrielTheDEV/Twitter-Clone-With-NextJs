@@ -9,7 +9,7 @@ interface LinkNavbarProps{
 export function Link_NavBar({name , route , svg }: LinkNavbarProps){
     return(
         <Link href={route}>
-            <div className='w-80 flex justify-start items-center p-2 text-black cursor-pointer hover:bg-gray-100 '> 
+            <div className='w-full flex justify-start items-center p-2 text-black cursor-pointer hover:bg-gray-100 '> 
                 <div className='flex items-center justify-start text-xl font-normal py-4 px-5'>
                     <span>
                         {svg}
