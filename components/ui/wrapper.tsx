@@ -5,7 +5,7 @@ interface WrapperChildren{
 
 export function Wrapper({children}: WrapperChildren){
     return(
-        <div className="flex mx-60">
+        <div className="flex mx-72">
             {children}
         </div>
     )

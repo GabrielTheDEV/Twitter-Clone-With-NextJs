@@ -10,63 +10,62 @@ import  {
     More_Icon
 }  from "../../public/images/navbar/Navbar_Icons";
 import { PostButton } from "../ui/button";
+import { Header } from "../ui/header";
 
 
 export function NavBar(){
     return(
-        <aside className='w-1/3 flex flex-col justify-between border-r '>
-         
-          
-        <nav className='nav'>
-            <div className='w-auto flex ml-5 p-2 items-start '> 
+        <aside className='w-2/5 flex flex-col border-r '>
+            <Header>
                 <h1 className="text-2xl">Twitter</h1>
-            </div>
+            </Header>
 
-            <Link_NavBar 
-                name="Home"
-                route="/" 
-                svg={<Home_Icon/>}
-            />
-             <Link_NavBar 
-                name="Explorer"
-                route="/explorer" 
-                svg={<Search_Icon/>}
-            />
-             <Link_NavBar 
-                name="Notifications"
-                route="/notifications" 
-                svg={<Notification_Icon/>}
-            />
-             <Link_NavBar 
-                name="Messages"
-                route="/message" 
-                svg={<Messages_Icon/>}
-            />
-             <Link_NavBar 
-                name="Saves"
-                route="/saves" 
-                svg={<Saves_Icon/>}
-            />
-             <Link_NavBar 
-                name="Lists"
-                route="/lists" 
-                svg={<Lists_Icon/>}
-            />
-             <Link_NavBar 
-                name="Profile"
-                route="/" 
-                svg={<Profile_Icon/>}
-            />
-             <Link_NavBar 
-                name="More"
-                route="/" 
-                svg={<More_Icon/>}
-            />
+            <nav className='nav'>
+                <Link_NavBar 
+                    name="Home"
+                    route="/" 
+                    svg={<Home_Icon/>}
+                />
+                <Link_NavBar 
+                    name="Explorer"
+                    route="/explorer" 
+                    svg={<Search_Icon/>}
+                />
+                <Link_NavBar 
+                    name="Notifications"
+                    route="/notifications" 
+                    svg={<Notification_Icon/>}
+                />
+                <Link_NavBar 
+                    name="Messages"
+                    route="/message" 
+                    svg={<Messages_Icon/>}
+                />
+                <Link_NavBar 
+                    name="Saves"
+                    route="/saves" 
+                    svg={<Saves_Icon/>}
+                />
+                <Link_NavBar 
+                    name="Lists"
+                    route="/lists" 
+                    svg={<Lists_Icon/>}
+                />
+                <Link_NavBar 
+                    name="Profile"
+                    route="/userName" 
+                    svg={<Profile_Icon/>}
+                />
+                <Link_NavBar 
+                    name="More"
+                    route="/" 
+                    svg={<More_Icon/>}
+                />
 
-{/* 
-             <BigPostButton/>  */}
-             <PostButton/>
-        </nav>
+    {/* 
+                <BigPostButton/>  */}
+                <PostButton/>
+            </nav>
 
         {/* <section className="login-out">
              <UserImg/>
