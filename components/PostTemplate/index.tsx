@@ -24,7 +24,11 @@ export function PostTemplate({tweet, image}: PostProps):JSX.Element{
 
                 <div className="my-2">
                     <p className="text-base text-light break-all whitespace-pre-wrap">{tweet}</p>
-                    <img src={image} alt={image && 'images'} />
+                    <img 
+                    src={image} 
+                    alt={image && 'images'}
+                    className="w-full h-auto border rounded-2xl"
+                    />
                 </div>
 
                 <div className="w-full flex justify-between py-2 mt-2 ">

@@ -16,6 +16,8 @@ export function TweetComposer():JSX.Element {
             setNewTweet(tweet)
         }
     };
+    function handleMidia(){}
+
 
     function handleSubmit(e : FormEvent <HTMLFormElement> ){
         e.preventDefault();
@@ -43,7 +45,15 @@ export function TweetComposer():JSX.Element {
                 </textarea>
 
                 <div className="flex justify-between items-center mt-2">
-                    
+                    <div>
+                        <input 
+                        type="file"
+                        accept="image/*, video/*"
+                        onChange={handleMidia}
+                        className="cursor-pointer text-white"
+                        />
+                    </div>
+
                     <span className={`text-sm ${newTweet.length === maxCharacters ? 'text-red-500': 'text-green-500'}`}> 
                        {`${ newTweet.length +'/'+ maxCharacters } ${newTweet.length >= maxCharacters ? ' -  Your tweet is over 280 characters' : ''}`}
                     </span>
