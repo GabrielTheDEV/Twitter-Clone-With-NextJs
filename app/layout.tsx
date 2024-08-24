@@ -4,7 +4,7 @@ import "../style/globals.css";
 import { Wrapper } from "@/components/ui/wrapper";
 import { NavBar } from "@/components/navbar";
 import { SideBar } from "@/components/sidebar";
-import { ContextProvider } from "@/hooks/ManageState/context";
+import { ContextProvider } from "@/hooks/context";
 
 
 export const metadata: Metadata = {

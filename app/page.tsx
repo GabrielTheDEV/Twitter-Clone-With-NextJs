@@ -2,7 +2,7 @@
 import { PageComponent } from "@/components/pageComponent";
 import { PostTemplate } from "@/components/PostTemplate";
 import { TweetComposer } from "@/components/ui/tweetComposer";
-import { TweetsContext } from "@/hooks/ManageState/context";
+import { TweetsContext } from "@/hooks/context";
 
 
 export default function Home() {

@@ -1,7 +1,7 @@
 "use client"
 import { ChangeEvent, FormEvent, useContext, useState } from "react";
 import { Avatar } from "./avatar";
-import {TweetsContext } from "@/hooks/ManageState/context";
+import {TweetsContext } from "@/hooks/context";
 
 export function TweetComposer():JSX.Element {
     const {setTweets} = TweetsContext();
@@ -17,7 +17,6 @@ export function TweetComposer():JSX.Element {
         }
     };
     function handleMidia(){}
-
 
     function handleSubmit(e : FormEvent <HTMLFormElement> ){
         e.preventDefault();
