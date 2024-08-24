@@ -2,14 +2,19 @@
 import React, { createContext, useContext, useState } from "react";
 
 interface ContextType{
-    tweets: string;
-    setTweets: React.Dispatch<React.SetStateAction<string>>;
+    tweets: TweetType[];
+    setTweets: React.Dispatch<React.SetStateAction<TweetType[]>>;
 }
+interface TweetType{
+    id: number
+    content: string
+}
+
 const CONTEXT = createContext< ContextType | undefined>(undefined);
 
 
 export function ContextProvider({children}: { children: React.ReactNode}){
-    const [ tweets, setTweets ] = useState<string>('o');
+    const [ tweets, setTweets ] = useState<TweetType[]>([{ id: 1, content:'Hello , I`m Gabriel a FullStack Developer'}]);
 
     return(
         <CONTEXT.Provider value={{tweets , setTweets}}>

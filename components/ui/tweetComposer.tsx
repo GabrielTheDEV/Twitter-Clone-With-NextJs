@@ -4,27 +4,32 @@ import { Avatar } from "./avatar";
 import {TweetsContext } from "@/hooks/ManageState/context";
 
 export function TweetComposer():JSX.Element {
-    const [ tweets, setTweets ] = useState<string>('');
-    // const {tweets , setTweets} = TweetsContext();
-    // const { tweets , setTweets} = useContext(MyContext)
+    const {setTweets} = TweetsContext();
+    const [ newTweet, setNewTweet ] = useState<string>('');
+
+    
 
 
     const maxCharacters = 280;
 
     function handleTweetChange(e : ChangeEvent <HTMLTextAreaElement> ){
-        let tweets = e.target.value;
+        let tweet = e.target.value;
 
-        if(tweets.length <= maxCharacters){
-            setTweets(tweets);
+        if(tweet.length <= maxCharacters){
+            setNewTweet(tweet)
         }
 
     };
 
     function handleSubmit(e : FormEvent <HTMLFormElement> ){
         e.preventDefault();
-        if(tweets.trim()){
-            console.log('Tweet Enviado :', tweets);
-            setTweets('')
+        if(newTweet.trim()){
+            setTweets(prev => [
+                ...prev,{ id: 2, content: newTweet}
+            ]);
+            setNewTweet('')
+
+            // console.log('Tweet Enviado :', Tweet);
         }
     };
 
@@ -37,23 +42,23 @@ export function TweetComposer():JSX.Element {
             </div>
             <form onSubmit={handleSubmit} className="w-full">
                 <textarea
-                    value={tweets}
+                    value={newTweet}
                     onChange={handleTweetChange}
                     placeholder="What is happening?!"
                     className={`w-full border-b
-                        h-${ tweets.length <= 70 ? 18 : tweets.length <= 148 ? 24 : 36 }
+                        h-${ newTweet.length <= 70 ? 18 : newTweet.length <= 148 ? 24 : 36 }
                         p-2 resize-none focus:outline-none`}
                 ></textarea>
                 <div className="flex justify-between items-center mt-2">
 
-                    <span className={`text-sm ${tweets.length === maxCharacters ? 'text-red-500': 'text-green-500'}`
+                    <span className={`text-sm ${newTweet.length === maxCharacters ? 'text-red-500': 'text-green-500'}`
                     }> 
-                       {`${ tweets.length +'/'+ maxCharacters } ${tweets.length >= maxCharacters ? ' -  Your tweet is over 280 characters' : ''}`}
+                       {`${ newTweet.length +'/'+ maxCharacters } ${newTweet.length >= maxCharacters ? ' -  Your tweet is over 280 characters' : ''}`}
                     </span>
 
                     <button
                     type="submit"
-                    disabled={tweets.length > maxCharacters || !tweets.trim()}
+                    disabled={newTweet.length > maxCharacters || !newTweet.trim()}
                     className="bg-blue-500 text-white p-4 py-2 rounded hover:bg-blue-600 disabled:opacity-50"
                     >Tweet</button>
 

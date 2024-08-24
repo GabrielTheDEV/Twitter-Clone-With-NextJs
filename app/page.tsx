@@ -4,17 +4,22 @@ import { PostTemplate } from "@/components/PostTemplate";
 import { TweetComposer } from "@/components/ui/tweetComposer";
 import { TweetsContext } from "@/hooks/ManageState/context";
 
+
 export default function Home() {
-    // const { tweets} = useContext(MyContext)
-    const { tweets } = TweetsContext()
+  const { tweets } = TweetsContext();
+  console.log('Objeto tweet',tweets)
+    // const [state, setState] = useState<TweetsType[]>([{ id: 1 , content:'Hello'}])
  
   return (
     <>
       <PageComponent>
         <TweetComposer/>
         <div>
-          <PostTemplate tweet={tweets}/>
-          
+          {/* {tweets.map((post) => (
+            <div key={post.id}>
+              <PostTemplate tweet={post.content}/>
+            </div>
+          ))} */}
         </div>
       </PageComponent>
       
