@@ -7,9 +7,6 @@ export function TweetComposer():JSX.Element {
     const {setTweets} = TweetsContext();
     const [ newTweet, setNewTweet ] = useState<string>('');
 
-    
-
-
     const maxCharacters = 280;
 
     function handleTweetChange(e : ChangeEvent <HTMLTextAreaElement> ){
@@ -18,7 +15,6 @@ export function TweetComposer():JSX.Element {
         if(tweet.length <= maxCharacters){
             setNewTweet(tweet)
         }
-
     };
 
     function handleSubmit(e : FormEvent <HTMLFormElement> ){
@@ -28,11 +24,8 @@ export function TweetComposer():JSX.Element {
                 ...prev,{ id: 2, content: newTweet}
             ]);
             setNewTweet('')
-
-            // console.log('Tweet Enviado :', Tweet);
         }
     };
-
 
     return(
         <div className="w-full gap-2 flex border-b p-4  ">
@@ -45,14 +38,13 @@ export function TweetComposer():JSX.Element {
                     value={newTweet}
                     onChange={handleTweetChange}
                     placeholder="What is happening?!"
-                    className={`w-full border-b
-                        h-${ newTweet.length <= 70 ? 18 : newTweet.length <= 148 ? 24 : 36 }
-                        p-2 resize-none focus:outline-none`}
-                ></textarea>
-                <div className="flex justify-between items-center mt-2">
+                    className={`w-full border-b p-2 resize-none focus:outline-none h-${ newTweet.length <= 70 ? 18 
+                    : newTweet.length <= 148 ? 24 : 36 } `}>
+                </textarea>
 
-                    <span className={`text-sm ${newTweet.length === maxCharacters ? 'text-red-500': 'text-green-500'}`
-                    }> 
+                <div className="flex justify-between items-center mt-2">
+                    
+                    <span className={`text-sm ${newTweet.length === maxCharacters ? 'text-red-500': 'text-green-500'}`}> 
                        {`${ newTweet.length +'/'+ maxCharacters } ${newTweet.length >= maxCharacters ? ' -  Your tweet is over 280 characters' : ''}`}
                     </span>
 

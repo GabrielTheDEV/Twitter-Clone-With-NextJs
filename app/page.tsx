@@ -15,7 +15,7 @@ export default function Home() {
         <div>
           {tweets.map((post) => (
             <div key={post.id}>
-              <PostTemplate tweet={post.content}/>
+              <PostTemplate tweet={post.content} image={post.image}/>
             </div>
           ))}
         </div>

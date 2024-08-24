@@ -8,6 +8,7 @@ interface ContextType{
 interface TweetType{
     id: number
     content: string
+    image?: string
 }
 
 const CONTEXT = createContext< ContextType | undefined>(undefined);

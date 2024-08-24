@@ -4,9 +4,10 @@ import { Avatar } from "../ui/avatar"
 
 interface PostProps{
     tweet: string
+    image?: string
 }
 
-export function PostTemplate({tweet}: PostProps):JSX.Element{
+export function PostTemplate({tweet, image}: PostProps):JSX.Element{
     
     return(
         <div className="w-full h-full flex gap-2 p-3 pb-1 border-b hover:bg-gray-100">
@@ -23,6 +24,7 @@ export function PostTemplate({tweet}: PostProps):JSX.Element{
 
                 <div className="my-2">
                     <p className="text-base text-light break-all whitespace-pre-wrap">{tweet}</p>
+                    <img src={image} alt={image && 'images'} />
                 </div>
 
                 <div className="w-full flex justify-between py-2 mt-2 ">
