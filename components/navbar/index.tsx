@@ -9,7 +9,7 @@ import  {
     Profile_Icon, 
     More_Icon
 }  from "../../public/images/navbar/Navbar_Icons";
-import { PostButton } from "../ui/button";
+
 import { Header } from "../ui/header";
 
 
@@ -17,7 +17,7 @@ export function NavBar(){
     return(
         <aside className='w-2/5 flex flex-col border-r '>
             <Header>
-                <h1 className="text-2xl">Twitter</h1>
+                <h1 className="text-2xl font-medium text-start ml-4">Twitter</h1><span className="text-xl text-blue-400" >clone</span>
             </Header>
 
             <nav className='nav'>
@@ -62,9 +62,10 @@ export function NavBar(){
                     svg={<More_Icon/>}
                 />
 
-    {/* 
-                <BigPostButton/>  */}
-                <PostButton/>
+                <button
+                    type="submit"
+                    className="w-10/12 h-14 bg-blue-500 text-white text-bold rounded hover:bg-blue-600 "
+                >Tweet</button>
             </nav>
 
         {/* <section className="login-out">

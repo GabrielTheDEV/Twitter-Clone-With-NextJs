@@ -22,7 +22,7 @@ export function PostTemplate({tweet}: PostProps):JSX.Element{
                 </div>
 
                 <div className="my-2">
-                    <p className="text-base text-light">{tweet}</p>
+                    <p className="text-base text-light break-all whitespace-pre-wrap">{tweet}</p>
                 </div>
 
                 <div className="w-full flex justify-between py-2 mt-2 ">
