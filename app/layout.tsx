@@ -4,6 +4,7 @@ import "../style/globals.css";
 import { Wrapper } from "@/components/ui/wrapper";
 import { NavBar } from "@/components/navbar";
 import { SideBar } from "@/components/sidebar";
+import { ContextProvider } from "@/hooks/ManageState/context";
 
 
 export const metadata: Metadata = {
@@ -21,7 +22,9 @@ export default function RootLayout({
       <body>
         <Wrapper>
           <NavBar/>
-            {children}
+            <ContextProvider>
+              {children}
+            </ContextProvider>
           <SideBar/>
         </Wrapper>
       </body>

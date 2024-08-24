@@ -7,17 +7,18 @@ interface PostProps{
 }
 
 export function PostTemplate({tweet}: PostProps):JSX.Element{
+    
     return(
         <div className="w-full h-full flex gap-2 p-3 pb-1 border-b hover:bg-gray-100">
             <div>
-                <Avatar />
+                <Avatar image="https://avatars.githubusercontent.com/u/152109789?v=4" />
             </div>
 
             <div className="w-full flex flex-col justify-center mt-1 mr-2"> 
                 <div className="flex items-center gap-2">
                     <span className="text-lg text-black font-medium">Nome do Usuario</span>
                     <span className="text-gray-400">@Nickname</span>
-                    <span className="text-gray-400">- há 1 min</span>
+                    <span className="text-gray-400">- há 2 dias</span>
                 </div>
 
                 <div className="my-2">
