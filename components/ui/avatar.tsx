@@ -1,11 +1,13 @@
 
 interface AvatarProps{
     image ?: string
+    width: string
+    height: string
 }
 
-export function Avatar({image}: AvatarProps){
+export function Avatar({image, width, height}: AvatarProps){
     return(
-        <div className="w-12 h-12 flex justify-center items-center border rounded-full overflow-hidden hover:border-blue-400">
+        <div className={`${width} ${height} flex justify-center items-center border rounded-full overflow-hidden hover:border-blue-400`}>
             <img 
             src={image} 
             alt="avatar" 

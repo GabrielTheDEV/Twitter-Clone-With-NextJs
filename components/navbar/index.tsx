@@ -53,7 +53,7 @@ export function NavBar(){
                 />
                 <Link_NavBar 
                     name="Profile"
-                    route="/userName" 
+                    route="/profile" 
                     svg={<Profile_Icon/>}
                 />
                 <Link_NavBar 

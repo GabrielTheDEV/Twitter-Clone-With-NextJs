@@ -1,5 +1,5 @@
 "use client"
-import { ChangeEvent, FormEvent, useContext, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { Avatar } from "./avatar";
 import {TweetsContext } from "@/hooks/context";
 
@@ -31,8 +31,11 @@ export function TweetComposer():JSX.Element {
     return(
         <div className="w-full gap-2 flex border-b p-4  ">
             <div className="">
-                {/* <p className="w-12 h-12 flex justify-center items-center border rounded-full">foto</p> */}
-                <Avatar image="https://avatars.githubusercontent.com/u/152109789?v=4"/>
+                <Avatar 
+                image="https://avatars.githubusercontent.com/u/152109789?v=4"
+                width={'w-12'}
+                height={'w-12'}
+                />
             </div>
             <form onSubmit={handleSubmit} className="w-full">
                 <textarea

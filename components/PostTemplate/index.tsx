@@ -12,7 +12,11 @@ export function PostTemplate({tweet, image}: PostProps):JSX.Element{
     return(
         <div className="w-full h-full flex gap-2 p-3 pb-1 border-b hover:bg-gray-100">
             <div>
-                <Avatar image="https://avatars.githubusercontent.com/u/152109789?v=4" />
+                <Avatar 
+                image="https://avatars.githubusercontent.com/u/152109789?v=4"
+                width={'w-12'}
+                height={'w-12'}
+                />
             </div>
 
             <div className="w-full flex flex-col justify-center mt-1 mr-2"> 
@@ -22,7 +26,7 @@ export function PostTemplate({tweet, image}: PostProps):JSX.Element{
                     <span className="text-gray-400">- há 2 dias</span>
                 </div>
 
-                <div className="my-2">
+                <div className="flex flex-col gap-2 my-2">
                     <p className="text-base text-light break-all whitespace-pre-wrap">{tweet}</p>
                     <img 
                     src={image} 
