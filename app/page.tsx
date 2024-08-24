@@ -10,7 +10,7 @@ export default function Home() {
  
   return (
     <>
-      <PageComponent>
+      <PageComponent >
         <TweetComposer/>
         <div>
           {tweets.map((post) => (

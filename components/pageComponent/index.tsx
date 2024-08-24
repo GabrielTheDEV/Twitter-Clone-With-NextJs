@@ -6,7 +6,7 @@ interface PageProps{
 
 export function PageComponent({children}: PageProps){
     return(
-        <section className="w-full h-screen border-r">
+        <section className="w-full h-screen border-r overflow-y-scroll">
             
             <Header border={true} >
                 <p>alguma coisa</p>
