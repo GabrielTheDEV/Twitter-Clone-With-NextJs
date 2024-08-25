@@ -17,9 +17,9 @@ export function SideBar(){
                 tags={'#music, #songs #hiphop'}
             />
             <TrendingTopics_BoxContent
-                trending={'Music - trending'}
-                title={ 'Trending'}
-                tags={'#music, #songs #hiphop'}
+                trending={'Sport - trending'}
+                title={ 'Madri'}
+                tags={'#sport, #soccer'}
             />
             <TrendingTopics_BoxContent
                 trending={'Music - trending'}
@@ -34,10 +34,18 @@ export function SideBar(){
         </Box>
 
         <Box title="Who to follow">
-            <AccountSuggestions_BoxContent/>
-            <AccountSuggestions_BoxContent/>
-            <AccountSuggestions_BoxContent/>
-            <AccountSuggestions_BoxContent/>
+            <AccountSuggestions_BoxContent>
+            
+            </AccountSuggestions_BoxContent>
+            <AccountSuggestions_BoxContent>
+
+            </AccountSuggestions_BoxContent>
+            <AccountSuggestions_BoxContent>
+
+            </AccountSuggestions_BoxContent>
+            <AccountSuggestions_BoxContent>
+
+            </AccountSuggestions_BoxContent>
         </Box>
 
         <div className="p-2 hover:bg-gray-100">

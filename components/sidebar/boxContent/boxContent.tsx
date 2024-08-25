@@ -1,3 +1,4 @@
+import { FollowButton } from "@/components/ui/followButton"
 
 interface TrendingTopicsProps{
     trending ?:string
@@ -25,10 +26,18 @@ export function TrendingTopics_BoxContent({trending , title , tags}: TrendingTop
     )
 }
 
-export function AccountSuggestions_BoxContent({account}: AccountSuggestionsProps ): JSX.Element{
+export function AccountSuggestions_BoxContent(account: AccountSuggestionsProps ): JSX.Element{
     return(
-        <div className="w-full h-20 flex flex-col justify-center p-4 hover:bg-gray-100">
-            {account}
+        <div className="w-full h-20 flex items-center justify-between p-4 hover:bg-gray-100">
+            <div className="h-full flex items-center gap-4">
+                <div className="border p-4">
+                    <img src="" alt="" />
+                </div>
+                <span>Nome do usuario</span>
+            </div>
+            
+
+            <FollowButton/>
         </div>
     )
 }
