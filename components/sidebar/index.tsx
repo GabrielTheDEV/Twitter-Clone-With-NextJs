@@ -1,5 +1,7 @@
 import { Header } from "../ui/header"
 import { SearchBox } from "../ui/searchBox";
+import { Box } from "./box/box";
+import { AccountSuggestions_BoxContent, TrendingTopics_BoxContent } from "./boxContent/boxContent";
 
 export function SideBar(){
     return (
@@ -8,36 +10,13 @@ export function SideBar(){
             <SearchBox/>
         </Header>
 
-        <div className="w-full h-auto flex flex-col items-start my-2 border rounded-2xl">
-            <div className="w-full p-4">
-                <span className="text-xl mb-4 font-bold">What's happening</span>
-            </div>
-            
+        <Box title="What's Happening?">
+            <TrendingTopics_BoxContent/>
+        </Box>
 
-            <div className="w-full h-20 hover:bg-gray-100"><p>1</p></div>
-            <div className="w-full h-20 hover:bg-gray-100"><p>1</p></div>
-            <div className="w-full h-20 hover:bg-gray-100"><p>1</p></div>
-            <div className="w-full h-20 hover:bg-gray-100"><p>1</p></div>
-
-            <div className="w-full p-3 rounded-b-xl hover:text-blue-500 hover:bg-gray-100">
-                <span className="text-sm mb-4 ">Show more</span>
-            </div>
-        </div>
-
-        <div className="w-full h-auto flex flex-col items-start my-3 border rounded-2xl">
-            <div className="w-full p-4">
-                <span className="text-xl mb-4 font-bold">What's happening</span>
-            </div>
-            
-
-            <div className="w-full h-20 hover:bg-gray-100"><p>1</p></div>
-            <div className="w-full h-20 hover:bg-gray-100"><p>1</p></div>
-            <div className="w-full h-20 hover:bg-gray-100"><p>1</p></div>
-
-            <div className="w-full p-3 rounded-b-xl hover:text-blue-500 hover:bg-gray-100">
-                <span className="text-sm mb-4 ">Show more</span>
-            </div>
-        </div>
+        <Box title="Who to follow">
+            <AccountSuggestions_BoxContent/>
+        </Box>
 
         <div>
             <span>Repositorio do Projeto</span>
