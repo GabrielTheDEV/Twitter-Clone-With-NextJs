@@ -16,7 +16,21 @@ export function SideBar(){
                 title={ 'Trending'}
                 tags={'#music, #songs #hiphop'}
             />
-           
+            <TrendingTopics_BoxContent
+                trending={'Music - trending'}
+                title={ 'Trending'}
+                tags={'#music, #songs #hiphop'}
+            />
+            <TrendingTopics_BoxContent
+                trending={'Music - trending'}
+                title={ 'Trending'}
+                tags={'#music, #songs #hiphop'}
+            />
+            <TrendingTopics_BoxContent
+                trending={'Music - trending'}
+                title={ 'Trending'}
+                tags={'#music, #songs #hiphop'}
+            />
         </Box>
 
         <Box title="Who to follow">

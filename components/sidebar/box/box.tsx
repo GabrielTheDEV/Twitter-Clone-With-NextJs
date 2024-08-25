@@ -12,7 +12,7 @@ export function Box({title, children}: BoxProps):JSX.Element{
             </div>
         
 
-            <div className="w-full h-20 flex flex-col justify-center p-4 hover:bg-gray-100">
+            <div className="w-full h-auto flex flex-col justify-center ">
                 {children}
             </div>
 
