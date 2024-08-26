@@ -6,7 +6,7 @@ interface BoxProps{
 
 export function Box({title, children}: BoxProps):JSX.Element{
     return(
-        <div className="w-full h-auto flex flex-col items-start my-2 border rounded-2xl" >
+        <div className="w-full h-auto flex flex-col items-start my-2 border rounded-2xl cursor-pointer" >
             <div className="w-full p-4">
                 <span className="text-xl mb-4 font-bold">{title}</span>
             </div>
@@ -16,7 +16,7 @@ export function Box({title, children}: BoxProps):JSX.Element{
                 {children}
             </div>
 
-            <div className="w-full p-3 rounded-b-xl hover:text-blue-500 hover:bg-gray-100">
+            <div className="w-full p-3 rounded-b-xl hover:text-blue-500 hover:bg-gray-100 cursor-pointer">
                 <span className="text-sm mb-4 ">Show more</span>
             </div>
         </div>

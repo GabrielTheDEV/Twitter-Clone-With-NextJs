@@ -18,13 +18,8 @@ export function SideBar(){
             />
             <TrendingTopics_BoxContent
                 trending={'Sport - trending'}
-                title={ 'Madri'}
-                tags={'#sport, #soccer'}
-            />
-            <TrendingTopics_BoxContent
-                trending={'Music - trending'}
                 title={ 'Trending'}
-                tags={'#music, #songs #hiphop'}
+                tags={'#sport, #soccer'}
             />
             <TrendingTopics_BoxContent
                 trending={'Music - trending'}

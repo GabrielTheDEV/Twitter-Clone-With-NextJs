@@ -15,7 +15,7 @@ import { Header } from "../ui/header";
 
 export function NavBar(){
     return(
-        <aside className='w-2/5 flex flex-col border-r '>
+        <aside className='w-2/5  flex flex-col border-r '>
             <Header>
                 <h1 className="text-2xl font-medium text-start ml-4">Twitter</h1><span className="text-xl text-blue-400" >clone</span>
             </Header>

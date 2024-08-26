@@ -15,7 +15,9 @@ export default function Home() {
         <div>
           {tweets.map((post) => (
             <div key={post.id}>
-              <PostTemplate tweet={post.content} image={'https://imageio.forbes.com/specials-images/dam/imageserve/930116744/960x0.jpg?height=473&width=711&fit=bounds'}/>
+              <PostTemplate 
+              tweet={post.content} 
+              image={'https://imageio.forbes.com/specials-images/dam/imageserve/930116744/960x0.jpg?height=473&width=711&fit=bounds'}/>
             </div>
           ))}
         </div>
