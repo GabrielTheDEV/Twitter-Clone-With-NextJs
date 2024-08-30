@@ -1,10 +1,14 @@
 import { PageComponent } from "@/components/pageComponent";
 import { Avatar } from "@/components/ui/avatar";
 import { FollowButton } from "@/components/ui/followButton";
+import { Header } from "@/components/ui/header";
 
-export default function userPage(){
+export default function userPage({params}:{params:{slug:string}}){
     return (
         <PageComponent>
+            <Header>
+                f
+            </Header>
             <div className="w-full pb-2">
                 <div className="w-full h-52 border-b bg-gray-200 "></div>
 
@@ -24,7 +28,7 @@ export default function userPage(){
 
                 <div className="m-4">
                     <div>
-                        <span className="text-xl font-medium">Nome do Usuario</span>
+                        <span className="text-xl font-medium">{params.slug}</span>
                         <p className="text-gray-400">@Nickname</p>
                     </div>
                     <div className="mt-4 break-all">

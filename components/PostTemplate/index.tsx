@@ -1,7 +1,6 @@
 import { Link_Icon, Reply_Icon, Repost_Icon, Save_Icon } from "@/public/images/postTemplate/PostTemplate"
 import { Avatar } from "../ui/avatar"
 
-
 interface PostProps{
     tweet: string
     image?: string

@@ -4,13 +4,9 @@ interface PageProps{
     children: React.ReactNode
 }
 
-export function PageComponent({children}: PageProps){
+export function PageComponent({children}: PageProps):JSX.Element {
     return(
         <section className="w-full h-screen border-r overflow-y-scroll">
-            
-            <Header border={true} >
-                <p>alguma coisa</p>
-            </Header>
             {children}
         </section>
     )

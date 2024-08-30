@@ -15,7 +15,7 @@ const CONTEXT = createContext< ContextType | undefined>(undefined);
 
 
 export function ContextProvider({children}: { children: React.ReactNode}){
-    const [ tweets, setTweets ] = useState<TweetType[]>([{ id: 1, content:'Hello , I`m Gabriel a FullStack Developer'}]);
+    const [ tweets, setTweets ] = useState<TweetType[]>([{ id: 1, content:'Hello , I`m Gabriel a FullStack Developer, Welcome in my project!'}]);
 
     return(
         <CONTEXT.Provider value={{tweets , setTweets}}>
