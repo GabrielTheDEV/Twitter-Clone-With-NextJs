@@ -1,5 +1,7 @@
+// 'use client'
 import { PageComponent } from "@/components/pageComponent";
 import { Avatar } from "@/components/ui/avatar";
+import { BackButton } from "@/components/ui/backButton";
 import { FollowButton } from "@/components/ui/followButton";
 import { Header } from "@/components/ui/header";
 
@@ -7,8 +9,15 @@ export default function userPage({params}:{params:{slug:string}}){
     return (
         <PageComponent>
             <Header>
-                f
+                <div className="flex items-center justify-center gap-2 p-2">
+                    <BackButton/>
+                    <div className="text-start">
+                        <span className="text-xl ">{params.slug}</span>
+                        <p className="text-sm">{0} Posts</p>
+                    </div>
+                </div>
             </Header>
+
             <div className="w-full pb-2">
                 <div className="w-full h-52 border-b bg-gray-200 "></div>
 

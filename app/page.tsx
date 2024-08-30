@@ -14,7 +14,10 @@ export default function Home() {
     <>
       <PageComponent >
         <Header border={true}>
-          Alguma coisa
+          <div className="w-full h-full flex">
+            <div className="w-full h-full flex items-center justify-center font-medium hover:bg-gray-100 ">For you</div>
+            <div className="w-full h-full flex items-center justify-center font-medium hover:bg-gray-100">Following</div>
+          </div>
         </Header>
         <TweetComposer/>
         <div>
